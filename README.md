@@ -6,7 +6,6 @@ This project uses [Playwright](https://playwright.dev/) for automated browser te
 
 ## 1. Clone the Repository
 
-Replace `https://github.com/Sarafat-Murshid/Playwright-Testing.git` with your GitHub repository URL:
 
 ```sh
 git clone https://github.com/Sarafat-Murshid/Playwright-Testing.git
