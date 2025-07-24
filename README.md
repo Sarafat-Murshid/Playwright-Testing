@@ -6,7 +6,6 @@ This project uses [Playwright](https://playwright.dev/) for automated browser te
 
 ## 1. Clone the Repository
 
-
 ```sh
 git clone https://github.com/Sarafat-Murshid/Playwright-Testing.git
 cd "Playwright Testing"
@@ -33,20 +32,24 @@ Install required packages:
 ```sh
 npm install
 ```
+
 ```sh
 npx install playwright
 ```
+
 ---
 
 ## 4. Configure Environment Variables
 
-Create the `.env` file in the project root. Example:
+Create the `.env` file in the project root. Copy these into that file:
 
 ```properties
 BASE_EMAIL=testuser@gmail.com
 PASSWORD=Test@1234
-SIGNUP_PATH=/auth/signup
-SIGNIN_PATH=/auth/signin
+SIGNUP_PATH=/auth/signup?returnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fwww.eventbookings.com%252Fb%252Fmember%26client_id%3Dwebapp%26nonce%3Db4a33dd99f267b1608ee%26state%3D047d8057f22531a94275b451f31d2a%26scope%3Doffline_access%2520email%2520profile%2520IdentityServerApi%2520openid%26code_challenge%3D6SUrUH0hfvriBQ1tWfW-VPQPKz_zBYEXzJc9IN0563A%26code_challenge_method%3DS256
+SIGNUP_ALT_PATH=/auth/signup
+SIGNIN_PATH=/auth/signin?ReturnUrl=%2Fconnect%2Fauthorize%2Fcallback%3Fresponse_type%3Dcode%26redirect_uri%3Dhttps%253A%252F%252Fwww.eventbookings.com%252Fb%252Fmember%26client_id%3Dwebapp%26nonce%3Db4a33dd99f267b1608ee%26state%3D047d8057f22531a94275b451f31d2a%26scope%3Doffline_access%2520email%2520profile%2520IdentityServerApi%2520openid%26code_challenge%3D6SUrUH0hfvriBQ1tWfW-VPQPKz_zBYEXzJc9IN0563A%26code_challenge_method%3DS256
+SIGNIN_ALT_PATH=/auth/signin
 SIGNUP_SUCCESS_PATH=/b/member/account
 SIGNUP_SUCCESS_ALT_PATH=/b/member/account?signup=success&st=5
 ```

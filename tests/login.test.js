@@ -33,7 +33,7 @@ test.describe("@login", () => {
     const login = new LoginPage(page);
     await login.navigate();
     await login.login("", "");
-    expect(await login.getErrorMessage()).toBeTruthy();
+    expect(await login.getErrorMessage()).toContain("required");
   });
 
   test("Login with invalid email format", async ({ page }) => {

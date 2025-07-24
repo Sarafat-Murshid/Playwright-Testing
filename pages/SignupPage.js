@@ -19,7 +19,7 @@ export class SignupPage {
 
   async navigate() {
     const identityBaseURL = base.info().project.use.identityBaseURL;
-    const signupPath = process.env.SIGNUP_PATH;
+    const signupPath = process.env.SIGNUP_PATH || process.env.SIGNUP_ALT_PATH;
     await this.page.goto(`${identityBaseURL}${signupPath}`);
     await this.firstNameInput.waitFor({ state: "visible" });
   }
