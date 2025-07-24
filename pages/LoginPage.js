@@ -8,8 +8,15 @@ export class LoginPage {
     this.emailInput = page.locator("#Email");
     this.passwordInput = page.locator("#Password");
     this.loginButton = page.locator('button:has-text("Log In")');
-    this.emailErrorMessage = page.locator('span[data-valmsg-for="Email"].error-msg');
-    this.passwordErrorMessage = page.locator('span[data-valmsg-for="Password"].error-msg');
+    this.emailErrorMessage = page.locator(
+      'span[data-valmsg-for="Email"].error-msg'
+    );
+    this.passwordErrorMessage = page.locator(
+      'span[data-valmsg-for="Password"].error-msg'
+    );
+    this.wrongCredentialsErrorMessage = page.locator(
+      "div.error-msg.validation-summary-errors"
+    );
   }
 
   async navigate() {
@@ -45,5 +52,23 @@ export class LoginPage {
     const emailError = await this.emailErrorMessage.textContent();
     const passwordError = await this.passwordErrorMessage.textContent();
     return `${emailError} ${passwordError}`.trim();
+  }
+
+  async getWrongCredentialsErrorMessage() {
+    const wrongCredentialsError =
+      await this.wrongCredentialsErrorMessage.textContent();
+    return `${wrongCredentialsError}`.trim();
+  }
+
+  async isEmailInputVisible() {
+    return await this.emailInput.isVisible();
+  }
+
+  async isPasswordInputVisible() {
+    return await this.passwordInput.isVisible();
+  }
+
+  async isSubmitButtonVisible() {
+    return await this.loginButton.isVisible();
   }
 }

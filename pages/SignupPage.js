@@ -12,6 +12,9 @@ export class SignupPage {
     this.confirmPasswordInput = page.locator("#ConfirmPassword");
     this.signupButton = page.locator("#btnSubmit");
     this.errorMessage = page.locator(".error-msg");
+    this.emailErrorMessage = this.page.locator(
+      'span[data-valmsg-for="Email"].error-msg'
+    );
   }
 
   async navigate() {
@@ -51,5 +54,10 @@ export class SignupPage {
   async getErrorMessage() {
     await this.errorMessage.waitFor({ state: "visible" });
     return await this.errorMessage.textContent();
+  }
+
+  async getEmailErrorMessage() {
+    await this.emailErrorMessage.waitFor({ state: "visible" });
+    return await this.emailErrorMessage.textContent();
   }
 }
