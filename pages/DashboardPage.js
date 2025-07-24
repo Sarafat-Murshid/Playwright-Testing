@@ -1,4 +1,3 @@
-import { test as base } from "@playwright/test";
 import dotenv from "dotenv";
 dotenv.config();
 

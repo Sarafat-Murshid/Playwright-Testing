@@ -21,7 +21,7 @@ export class LoginPage {
 
   async navigate() {
     const identityBaseURL = base.info().project.use.identityBaseURL;
-    const signinPath = process.env.SIGNIN_PATH;
+    const signinPath = process.env.SIGNIN_PATH || process.env.SIGNUP_ALT_PATH;
     await this.page.goto(`${identityBaseURL}${signinPath}`);
   }
 
