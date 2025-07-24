@@ -38,14 +38,15 @@ npm install
 
 ## 4. Configure Environment Variables
 
-Edit the `.env` file in the project root. Example:
+Create the `.env` file in the project root. Example:
 
 ```properties
 BASE_EMAIL=testuser@gmail.com
 PASSWORD=Test@1234
-SIGNUP_PATH=...
-SIGNIN_PATH=...
-SIGNUP_SUCCESS_PATH=...
+SIGNUP_PATH=/auth/signup
+SIGNIN_PATH=/auth/signin
+SIGNUP_SUCCESS_PATH=/b/member/account
+SIGNUP_SUCCESS_ALT_PATH=/b/member/account?signup=success&st=5
 ```
 
 Do not share sensitive credentials publicly.

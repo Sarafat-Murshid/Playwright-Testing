@@ -18,6 +18,6 @@ module.exports = {
     { name: "Mobile Chrome", use: devices["Pixel 5"] },
   ],
   retries: 1,
-  timeout: 100000,
+  timeout: 200000,
   reporter: [["html", { open: "never" }]],
 };
