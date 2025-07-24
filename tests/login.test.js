@@ -33,6 +33,9 @@ test.describe("@login", () => {
     const login = new LoginPage(page);
     await login.navigate();
     await login.login("", "");
+    await page.waitForSelector("#Email-error", {
+      timeout: 3000,
+    });
     expect(await login.getErrorMessage()).toContain("required");
   });
 
