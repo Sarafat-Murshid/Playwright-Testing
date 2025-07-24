@@ -1,7 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
-export class DashboardPage {
+export class DashBoardPage {
   constructor(page) {
     this.page = page;
     this.dropdownToggle = page.locator("#dropdownMenuButtonProfile");

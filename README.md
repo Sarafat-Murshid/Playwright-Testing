@@ -86,6 +86,18 @@ Run all tests:
 ```sh
 npx playwright test
 ```
+Run Specific Tests
+
+```sh
+# Run only login tests
+npx playwright test --grep "@login"
+
+# Run only signup tests  
+npx playwright test --grep "@signup"
+
+# Run specific browser
+npx playwright test --project="Firefox"
+```
 
 ---
 

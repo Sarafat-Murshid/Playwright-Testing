@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage";
-import { DashboardPage } from "../pages/DashBoardPage";
+import { DashBoardPage } from "../pages/DashBoardPage";
 import dotenv from "dotenv";
 dotenv.config();
 
@@ -18,7 +18,7 @@ test.describe("@login", () => {
 
     test("Login with valid credentials", async ({ page }) => {
       const login = new LoginPage(page);
-      const dashboard = new DashboardPage(page);
+      const dashboard = new DashBoardPage(page);
 
       await login.navigate();
       await login.login(process.env.BASE_EMAIL, process.env.PASSWORD);

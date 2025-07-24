@@ -1,6 +1,6 @@
 import { test, expect } from "@playwright/test";
 import { SignupPage } from "../pages/SignupPage";
-import { DashboardPage } from "../pages/DashBoardPage";
+import { DashBoardPage } from "../pages/DashBoardPage";
 import { LoginPage } from "../pages/LoginPage";
 import dotenv from "dotenv";
 dotenv.config();
@@ -12,7 +12,7 @@ test.describe("@signup", () => {
   test.describe("Positive Signup Tests @positive", () => {
     test("Successful signup with unique email", async ({ page }) => {
       const signup = new SignupPage(page);
-      const dashboard = new DashboardPage(page);
+      const dashboard = new DashBoardPage(page);
       const uniqueEmail = `${baseEmail.split("@")[0]}+${Date.now()}@${
         baseEmail.split("@")[1]
       }`;
@@ -36,7 +36,7 @@ test.describe("@signup", () => {
 
     test("Signup, login, then logout and login again", async ({ page }) => {
       const signup = new SignupPage(page);
-      const dashboard = new DashboardPage(page);
+      const dashboard = new DashBoardPage(page);
       const login = new LoginPage(page);
       const uniqueEmail = `${baseEmail.split("@")[0]}+${Date.now()}@${
         baseEmail.split("@")[1]
@@ -68,7 +68,7 @@ test.describe("@signup", () => {
       page,
     }) => {
       const signup = new SignupPage(page);
-      const dashboard = new DashboardPage(page);
+      const dashboard = new DashBoardPage(page);
       const uniqueEmail = `${baseEmail.split("@")[0]}+${Date.now()}@${
         baseEmail.split("@")[1]
       }`;
@@ -100,7 +100,7 @@ test.describe("@signup", () => {
       page,
     }) => {
       const signup = new SignupPage(page);
-      const dashboard = new DashboardPage(page);
+      const dashboard = new DashBoardPage(page);
       const uniqueEmail = `${baseEmail.split("@")[0]}+${Date.now()}@${
         baseEmail.split("@")[1]
       }`;
