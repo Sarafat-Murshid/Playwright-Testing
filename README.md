@@ -33,7 +33,9 @@ Install required packages:
 ```sh
 npm install
 ```
-
+```sh
+npx install playwright
+```
 ---
 
 ## 4. Configure Environment Variables
